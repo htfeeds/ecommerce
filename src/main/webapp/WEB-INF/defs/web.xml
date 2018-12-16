@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+    <definition name="product.details" extends="_root.head">
+        <put-attribute name="pageCssClasses" value="html-product-details-page" />
+        <put-attribute name="body" value="/WEB-INF/views/web/product/details.jsp" cascade="true" />
+        <put-attribute name="breadcrumb" value="/WEB-INF/views/web/product/_productBreadcrumb.jsp" cascade="true" />
+        <put-attribute name="productDetailsPictures" value="/WEB-INF/views/web/product/_productDetailsPictures.jsp" cascade="true" />
+        <put-attribute name="productManufacturers" value="/WEB-INF/views/web/product/_productManufacturers.jsp" cascade="true" />
+        <put-attribute name="availability" value="/WEB-INF/views/web/product/_availability.jsp" cascade="true" />
+        <put-attribute name="productPrice" value="/WEB-INF/views/web/product/_productPrice.jsp" cascade="true" />
+    </definition>
+
+    <definition name="home.index" extends="_root.head">
+        <put-attribute name="body" value="/WEB-INF/views/web/home/index.jsp" cascade="true" />
+        <put-attribute name="homePageTopPartial" value="/WEB-INF/views/web/home/homePageTopPartial.jsp" cascade="true" />
+        <put-attribute name="topicBlockPartial" value="/WEB-INF/views/web/home/topicBlockPartial.jsp" cascade="true" />
+        <put-attribute name="homePageCategoriesPartial" value="/WEB-INF/views/web/home/homePageCategoriesPartial.jsp" cascade="true" />
+        <put-attribute name="homePageProductsPartial" value="/WEB-INF/views/web/home/homePageProductsPartial.jsp" cascade="true" />
+        <put-attribute name="productBox" value="/WEB-INF/views/web/shared/_productBox.jsp" cascade="true" />
+        <put-list-attribute name="headCssFiles" inherit="true">
+            <add-attribute value="/WEB-RES/web/plugins/widgets.nivoSlider/content/nivoslider/nivo-slider.css" />
+            <add-attribute value="/WEB-RES/web/plugins/widgets.nivoSlider/content/nivoslider/themes/custom/custom.css" />
+        </put-list-attribute>
+        <put-list-attribute name="headScripts" inherit="true">
+            <add-attribute value="/WEB-RES/web/plugins/widgets.nivoSlider/scripts/jquery.nivo.slider.js" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="hello.index" template="/WEB-INF/views/web/hello/index.jsp" />
+
+</tiles-definitions>

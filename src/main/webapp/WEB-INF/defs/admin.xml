@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+    <!-- DASHBOARD -->
+    <definition name="admin.index" extends="_adminLayout">
+        <put-attribute name="body" value="/WEB-INF/views/admin/home/index.jsp" cascade="true" />
+        <put-attribute name="commonStatistics" value="/WEB-INF/views/admin/home/commonStatistics.jsp" cascade="true" />
+        <put-attribute name="latestOrders" value="/WEB-INF/views/admin/order/latestOrders.jsp" cascade="true" />
+        <put-list-attribute name="headCssFiles" inherit="true">
+            <add-attribute value="/WEB-RES/admin/content/ionicons/css/ionicons-2.0.1.min.css" />
+        </put-list-attribute>
+        <put-list-attribute name="headScripts" inherit="true">
+            <add-attribute value="/WEB-RES/admin/scripts/chartjs/Chart.min.js" />
+        </put-list-attribute>
+    </definition>
+    
+    <!-- CATEGORY -->
+    <definition name="admin.category.list" extends="_adminLayout">
+        <put-attribute name="body" value="/WEB-INF/views/admin/category/list.jsp" cascade="true" />
+        <put-attribute name="commonStatistics" value="/WEB-INF/views/admin/home/commonStatistics.jsp" cascade="true" />
+        <put-attribute name="latestOrders" value="/WEB-INF/views/admin/order/latestOrders.jsp" cascade="true" />
+        <put-list-attribute name="headCssFiles" inherit="true">
+            <add-attribute value="/WEB-RES/admin/content/ionicons/css/ionicons-2.0.1.min.css" />
+        </put-list-attribute>
+    </definition>
+
+</tiles-definitions>

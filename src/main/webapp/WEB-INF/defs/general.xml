@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+    <!-- START ADMIN LAYOUT -->
+    <definition name="_adminNotifications" template="/WEB-INF/views/admin/shared/_notifications.jsp" />
+    
+    <definition name="_adminMenu" template="/WEB-INF/views/admin/shared/_menu.jsp" />
+    
+    <definition name="_adminLayout" template="/WEB-INF/views/admin/shared/_adminLayout.jsp">
+        <put-attribute name="title" value="java-easy-comerce" />
+        <put-attribute name="description" value="java-easy-comerce" />
+        <put-attribute name="keywords" value="java-easy-comerce" />
+        <put-attribute name="generator" value="java-easy-comerce" />
+        <put-attribute name="author" value="HTFeeds" />
+        <put-attribute name="menu" value="_adminMenu" />
+        <put-attribute name="notifications" value="_adminNotifications" />
+        <put-list-attribute name="headCssFiles">
+            <add-attribute value="/WEB-RES/admin/content/adminLTE/skins/_all-skins.min.css" />
+            <add-attribute value="/WEB-RES/admin/content/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" />
+            <add-attribute value="/WEB-RES/admin/content/typeahead/typeahead.css" />
+            <add-attribute value="/WEB-RES/admin/content/fontAwesome/css/font-awesome-4.6.3.min.css" />
+            <add-attribute value="/WEB-RES/admin/content/jquery-ui-themes/smoothness/jquery-ui-1.10.3.custom.min.css" />
+            <add-attribute value="/WEB-RES/admin/content/kendo/2014.1.318/kendo.common.min.css" />
+            <add-attribute value="/WEB-RES/admin/content/kendo/2014.1.318/kendo.default.min.css" />
+            <add-attribute value="/WEB-RES/admin/content/kendo/2014.1.318/kendo.rtl.min.css" />
+            <add-attribute value="/WEB-RES/admin/content/bootstrap/css/bootstrap.min.css" />
+            <add-attribute value="/WEB-RES/admin/content/adminLTE/AdminLTE-2.3.0.min.css" />
+            <add-attribute value="/WEB-RES/admin/content/styles.css" />
+        </put-list-attribute>
+        <put-list-attribute name="headScripts">
+            <add-attribute value="/WEB-RES/admin/scripts/jquery-1.10.2.min.js" />
+            <add-attribute value="/WEB-RES/admin/scripts/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js" />
+            <add-attribute value="/WEB-RES/admin/scripts/bootstrap/bootstrap.min.js" />
+            <add-attribute value="/WEB-RES/admin/scripts/adminLTE/app.min.js" />
+            <add-attribute value="/WEB-RES/admin/scripts/jquery.validate.min.js" />
+            <add-attribute value="/WEB-RES/admin/scripts/jquery.validate.unobtrusive.min.js" />
+            <add-attribute value="/WEB-RES/admin/scripts/jquery-ui-1.10.3.custom.min.js" />
+            <add-attribute value="/WEB-RES/admin/scripts/jquery-migrate-1.2.1.min.js" />
+            <add-attribute value="/WEB-RES/admin/scripts/typeahead/typeahead.bundle.min.js" />
+            <add-attribute value="/WEB-RES/admin/scripts/admin.common.js" />
+            <add-attribute value="/WEB-RES/admin/scripts/admin.navigation.js" />
+            <add-attribute value="/WEB-RES/admin/scripts/admin.search.js" />
+            <add-attribute value="/WEB-RES/admin/scripts/kendo/2014.1.318/kendo.web.min.js" />
+            <add-attribute value="/WEB-RES/admin/scripts/chartjs/Chart.min.js" />
+        </put-list-attribute>
+        <put-list-attribute name="footCssFiles" />
+        <put-list-attribute name="footScripts" />
+    </definition>
+    <!-- END ADMIN LAYOUT -->
+
+    <!-- START USER LAYOUT -->
+    <definition name="_notifications" template="/WEB-INF/views/web/shared/_notifications.jsp" />
+
+    <definition name="_header" template="/WEB-INF/views/web/shared/_header.jsp" />
+
+    <definition name="_columnsOne" template="/WEB-INF/views/web/shared/_columnsOne.jsp" />
+
+    <definition name="_social" template="/WEB-INF/views/web/shared/_social.jsp" />
+
+    <definition name="_newsLetterBox" template="/WEB-INF/views/web/shared/_newsLetterBox.jsp" />
+
+    <definition name="_footer" template="/WEB-INF/views/web/shared/_footer.jsp">
+        <put-attribute name="social" value="_social" />
+        <put-attribute name="newsLetterBox" value="_newsLetterBox" />
+    </definition>
+
+    <definition name="_root" template="/WEB-INF/views/web/shared/_root.jsp">
+        <put-attribute name="notifications" value="_notifications" />
+        <put-attribute name="header" value="_header" />
+        <put-attribute name="breadcrumb" value="" />
+        <put-attribute name="columnsOne" value="_columnsOne" />
+        <put-attribute name="footer" value="_footer" />
+    </definition>
+
+    <definition name="_root.head" template="/WEB-INF/views/web/shared/_root.head.jsp">
+        <put-attribute name="pageCssClasses" value="html-home-page" />
+        <put-attribute name="title" value="java-easy-comerce" />
+        <put-attribute name="description" value="java-easy-comerce" />
+        <put-attribute name="keywords" value="java-easy-comerce" />
+        <put-attribute name="generator" value="java-easy-comerce" cascade="true" />
+        <put-attribute name="author" value="HTFeeds" />
+        <put-attribute name="root" value="_root" />
+        <put-list-attribute name="headCssFiles">
+            <add-attribute value="/WEB-RES/web/content/jquery-ui-themes/smoothness/jquery-ui-1.10.3.custom.min.css" />
+            <add-attribute value="/WEB-RES/web/themes/defaultClean/content/css/styles.css" />
+        </put-list-attribute>
+        <put-list-attribute name="headScripts">
+            <add-attribute value="/WEB-RES/web/scripts/jquery-1.10.2.min.js" />
+            <add-attribute value="/WEB-RES/web/scripts/jquery.validate.min.js" />
+            <add-attribute value="/WEB-RES/web/scripts/jquery.validate.unobtrusive.min.js" />
+            <add-attribute value="/WEB-RES/web/scripts/jquery-ui-1.10.3.custom.min.js" />
+            <add-attribute value="/WEB-RES/web/scripts/jquery-migrate-1.2.1.min.js" />
+            <add-attribute value="/WEB-RES/web/scripts/public.common.js" />
+            <add-attribute value="/WEB-RES/web/scripts/public.ajaxcart.js" />
+        </put-list-attribute>
+        <put-list-attribute name="footCssFiles" />
+        <put-list-attribute name="footScripts" />
+    </definition>
+    <!-- END USER LAYOUT -->
+
+</tiles-definitions>
